@@ -8,6 +8,10 @@ the engineering program at the Bredesen Center (University of Tennessee, Knoxvil
 
 This project aims to model vehicle accident severity based on weather and road conditions. Once a final model is selected, we plan on performing exploratory factor analysis (or similar methodology) to identify which variables contribute the most to the severity of accidents. Additionally, we explore whether or not accident severity varies significantly by major city within the United States. This is a topic of great significance as vehicular accidents make up approximately 38,000 deaths in the United States each year and cause about 4.4 million hospitalizations.
 
+## Github Workflow
+
+We plan to manage the development of code by having one main branch and three development branches. Each respective member of the team is assigned a development branch.
+
 ## Data
 
 We have selected the dataset titled: “US Accidents (updated) A Countrywide Traffic Accident Dataset (2016 - 2020).” The dataset can be found here: https://www.kaggle.com/sobhanmoosavi/us-accidents
