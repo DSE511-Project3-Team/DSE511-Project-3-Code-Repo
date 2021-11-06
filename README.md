@@ -35,6 +35,6 @@ Ensemble methods that we use are:
 ## Contributing Team Members
 |Name     |  Slack Handle   | 
 |---------|-----------------|
-|[Sanjeev Singh|@isanjeevsingh|
+|Sanjeev Singh|@isanjeevsingh|
 |Russ Limber   |@Russtyhub    |
 |EonYeon Jo    |@EYJo1        |
