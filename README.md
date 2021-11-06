@@ -35,8 +35,8 @@ Ensemble methods that we use are:
 2. XGBoost
 3. Adaboost
 
-## Contributing Team Members
-|Name     |  Slack Handle   | 
+## Team Members
+|Name     |  Github Handle   | 
 |---------|-----------------|
 |Sanjeev Singh|@isanjeevsingh|
 |Russ Limber   |@Russtyhub    |
