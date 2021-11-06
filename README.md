@@ -10,7 +10,10 @@ This project aims to model vehicle accident severity based on weather and road c
 
 ## Github Workflow
 
-We plan to manage the development of code by having one main branch and three development branches. Each respective member of the team is assigned a development branch.
+We plan to manage the development of code by having one main branch and three development branches. Each respective member of the team is assigned a development branch. The task is divided using issues and each issues is grouped under milestones. Finally we track all the issues under the project section. Find the issues and the project at the following location:
+
+**[Project Board](https://github.com/DSE511-Project3-Team/DSE511-Project-3-Code-Repo/projects)**, 
+**[Current Issues](https://github.com/DSE511-Project3-Team/DSE511-Project-3-Code-Repo/issues)**
 
 ## Data
 
