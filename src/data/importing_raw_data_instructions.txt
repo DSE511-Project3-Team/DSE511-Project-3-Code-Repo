@@ -1,0 +1,5 @@
+You will need to download the data first from kaggle.com at:
+
+https://www.kaggle.com/sobhanmoosavi/us-accidents
+
+Use the file location on your machine in the generate_raw_data.py script. 
