@@ -43,6 +43,7 @@ We plan to manage the development of code by having one main branch and three de
     │   └── raw            <- The original data that we use for further processing.
     │
     ├── docs
+    │   ├── EDA            <- Folder saving generated images from EDA process.
     │   └── reports        <- Folder carrying reports and presentations submitted during the project.
     │
     ├── notebooks          <- Folder carrying Jupyter notebooks.
