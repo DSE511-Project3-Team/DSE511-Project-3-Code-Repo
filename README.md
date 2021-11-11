@@ -36,7 +36,6 @@ We plan to manage the development of code by having one main branch and three de
 **[Current Issues](https://github.com/DSE511-Project3-Team/DSE511-Project-3-Code-Repo/issues)**
 
 ## Repository Structure
-------------
 
     ├── README.md          <- The top-level README carrying the project description and organization.
     ├── data
@@ -44,33 +43,23 @@ We plan to manage the development of code by having one main branch and three de
     │   └── raw            <- The original data that we use for further processing.
     │
     ├── docs
-    │   ├── reports        <- Folder carrying reports and presentations submitted during the project.
-    │
+    │   └── reports        <- Folder carrying reports and presentations submitted during the project.
     │
     ├── notebooks          <- Folder carrying Jupyter notebooks.
-    │
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
     ├── src                <- Source code used in this project.
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │
-    │   │
+    │   ├── data           <- Scripts to download or generate data.
     │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │                     predictions
-    |   |
+    │   │                     predictions.
     │   ├── preprocessing  <- Scripts to perform train/test split, feature selection, feature 
     |   |                     extraction etcetra.
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations.
     │
-    │
-    │── requirements.txt   <- File carrying the list of dependencies you need to satisfy to run
-    │                         this project.
-    │
-    └── main.py            <- script that will run all the code necessary to generate your results
+    └── main.py            <- Script that will run all the code necessary to generate the results.
     
 
 ## Team Members
