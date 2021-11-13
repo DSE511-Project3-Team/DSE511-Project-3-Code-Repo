@@ -7,12 +7,29 @@ import statsmodels.api as sm
 from numpy import NaN
 
 dirname = os.path.dirname(__file__)
-relative_path = '../../data/raw/raw_data.csv'
+relative_path = '../../data/raw/accident_data.csv'
 datafile = os.path.join(dirname, relative_path)
 
 raw_data = pd.read_csv(datafile)
-
 print(raw_data.shape)
+
+city_list = ['Phoenix', 'Los Angeles', 'New York', 'Philadelphia', 'Houston', 'Chicago']
+state_list = ['AZ', 'CA', 'NY', 'PA', 'TX', 'IL']
+
+def isolate_city_state(data, cities, states):
+  
+    ''' This ensures that each city is selected with it's respective state
+    which is why I didn't simply run a merge statement.'''
+    
+    for x in zip(cities, states):
+        df_x = data.loc[(data['City'] == x[0]) & (data['State'] == x[1])]
+        df_x.append(df_x)
+    
+    return df_x
+
+
+raw_data = isolate_city_state(raw_data, city_list, state_list)
+print(raw_data.shape, '\n\n', raw_data.head())
 
 env_vars = ['Weather_Timestamp', 'Temperature(F)', 'Wind_Chill(F)', 'Humidity(%)', 'Pressure(in)', 
                     'Visibility(mi)', 'Wind_Direction', 'Wind_Speed(mph)', 'Precipitation(in)', 'Weather_Condition', 
