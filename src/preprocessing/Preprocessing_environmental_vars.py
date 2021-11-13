@@ -7,7 +7,7 @@ import statsmodels.api as sm
 from numpy import NaN
 
 dirname = os.path.dirname(__file__)
-relative_path = '../../data/raw/accident_data.csv'
+relative_path = '../../data/raw/raw_data.csv'
 datafile = os.path.join(dirname, relative_path)
 
 raw_data = pd.read_csv(datafile)
