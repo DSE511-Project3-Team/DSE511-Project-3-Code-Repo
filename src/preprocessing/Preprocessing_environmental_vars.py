@@ -6,7 +6,11 @@ import numpy as np
 import statsmodels.api as sm
 from numpy import NaN
 
-raw_data = pd.read_csv('C:\\Users\\Russ\\Desktop\\Final_Project_Fall_2021\\raw_data.csv')
+dirname = os.path.dirname(__file__)
+relative_path = '../../data/raw/accident_data.csv'
+datafile = os.path.join(dirname, relative_path)
+
+raw_data = pd.read_csv(datafile)
 
 print(raw_data.shape)
 
