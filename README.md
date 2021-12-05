@@ -15,7 +15,7 @@ We have selected the dataset titled: “US Accidents (updated) A Countrywide Tra
 The dataset consists of 1.5 million observations, and each observation has 47 features. And each sample represents an accident that occurred in the United States between 2016 and 2020.
 
 ### Accessing Data:
-1. The full raw data carrying 1.5 million observations can be downloaded from [here]('https://www.dropbox.com/s/mdw2asjrh8bm038/US_Accidents_Dec20_updated.csv?dl=1').
+1. The full raw data carrying 1.5 million observations can be downloaded from [here](https://www.dropbox.com/s/mdw2asjrh8bm038/US_Accidents_Dec20_updated.csv?dl=1).
 
 2. We build our analysis after performing downsampling for six cities: Phoenix, Los Angeles, New York, Philadelphia, Houston, and Chicago. This dataset can be found inside the folder: /data/raw/accident_data.csv. To regenerate this dataset execute the following command.
 
