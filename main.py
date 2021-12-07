@@ -26,6 +26,14 @@ def perform_tuning():
     # 2. Tune AdaBoost
     perform_adaboost_tuning(X, 'full')
     perform_adaboost_tuning(X, 'pca')
+    
+    # 3. Tune Logistic Regression
+    perform_Logistic_Regression_tuning(X, 'full')
+    perform_Logistic_Regression_tuning(X, 'pca')
+
+    # 4. Tune Random Forest
+    perform_random_forest_tuning(X, 'full')
+    perform_random_forest_tuning(X, 'pca')
 
 def generate_results():
     # Perform feature encoding, extraction, standardization, and train/val/test split
@@ -37,6 +45,14 @@ def generate_results():
 
     # 2. AdaBoost Results
     get_adaboost_results(X)
+    
+    # 3. Logistic Regression Results
+    perform_Logistic_Regression_testing(X=X, param='full')
+    perform_Logistic_Regression_testing(X=X, param='pca')
+
+    # 4. Random Forest Results
+    perform_random_forest_testing(X=X, param='full')
+    perform_random_forest_testing(X=X, param='pca')
 
 if __name__ == "__main__":
 
