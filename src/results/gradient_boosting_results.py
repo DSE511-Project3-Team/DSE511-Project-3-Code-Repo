@@ -25,8 +25,8 @@ def perform_gradient_boosting_testing(X, param):
         print("=========================================")
         
         xtrain, xval, xtest= pd.DataFrame(X_train), pd.DataFrame(X_val), pd.DataFrame(X_test)
-        best_param_dict = {'n_estimators': 366, 'max_features': 'log2', 'max_depth': 16, 'loss': 'deviance',
-         'learning_rate': 0.9134564564564565, 'criterion': 'mse'}
+        best_param_dict = {'n_estimators': 100, 'max_features': 'log2', 'max_depth': 20, 'loss': 'deviance',
+         'learning_rate': 1.0, 'criterion': 'mse'}
         
     elif param == 'pca':
         
@@ -35,8 +35,8 @@ def perform_gradient_boosting_testing(X, param):
         print("=========================================")
         
         xtrain, xval, xtest = pd.DataFrame(X_train_pca), pd.DataFrame(X_val_pca), pd.DataFrame(X_test_pca)
-        best_param_dict = {'n_estimators': 366, 'max_features': 'log2', 'max_depth': 16, 'loss': 'deviance',
-         'learning_rate': 0.9134564564564565, 'criterion': 'mse'}  
+        best_param_dict = {'n_estimators': 100, 'max_features': 'log2', 'max_depth': 20, 'loss': 'deviance',
+         'learning_rate': 1.0, 'criterion': 'mse'}  
         
     start = time.time()
 
