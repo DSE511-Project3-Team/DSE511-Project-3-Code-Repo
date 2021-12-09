@@ -57,7 +57,7 @@ def perform_gradient_boosting_testing(X, param):
     accuracy = accuracy_score(y_test, preds)
     
 
-    pt = PrettyTable(['Time to Tune (s)', 'Accuracy', 'Sensitivity', 
+    pt = PrettyTable(['Time to Test (s)', 'Accuracy', 'Sensitivity', 
                           'Specificity', 'Precision', 'F1 Score (macro)']) 
 
     pt.add_row([round(time_to_complete, 2), round(accuracy, 2), 
