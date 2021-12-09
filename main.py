@@ -4,7 +4,7 @@ import sys
 from src.data.download_data import generate_base_data
 from src.preprocessing.process_imputed_data import generate_imputed_data
 from src.preprocessing.process_modelling_data import get_modelling_data
-from src.models.tune_xgboost import perform_xgboost_tuning
+from src.models.tune_xgboost import perform_xgboost_tuning, perform_xgboost_tuning_2
 from src.models.tune_adaboost import perform_adaboost_tuning 
 from src.results.xgboost_results import get_xgboost_results
 from src.results.adaboost_results import get_adaboost_results
@@ -22,6 +22,9 @@ def perform_tuning():
     # 1. Tune XGBoost
     perform_xgboost_tuning(X, 'full')
     perform_xgboost_tuning(X, 'pca')
+
+    # Tune regularization parameter
+    perform_xgboost_tuning_2(X)
 
     # 2. Tune AdaBoost
     perform_adaboost_tuning(X, 'full')

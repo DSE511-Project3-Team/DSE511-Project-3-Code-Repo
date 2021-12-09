@@ -219,7 +219,7 @@ def perform_xgboost_tuning(X, param):
                     "max_depth": [3, 4, 6, 8],
                     "learning_rate": [1, 0.3, 0.01, 0.05]
                 }
-
+                
     if param == 'full':
         print("============================================")
         print(f"\033[1m XGBoost Tuning Results on Full Data\033[0m")
@@ -257,3 +257,97 @@ def perform_xgboost_tuning(X, param):
                         print(f"n_estimator: {n} \t scale_pos_weight: {spw} \t max_depth: {md} \t learning_rate: {lr} \t Accuracy: {round(100*score, 2)}% \t F1 Score(Macro): {round(f1_s, 2)}") 
     else:
         print("Incorrect argument was passed.")
+
+
+# ====================================================
+#  Round2: XGBoost Tuning Results on Full Data
+# ====================================================
+# max_depth: 12 	 reg_alpha: 0.01 	 reg_lambda: 0.1 	 Accuracy: 87.07% 	 F1 Score(Macro): 0.81
+# max_depth: 12 	 reg_alpha: 0.01 	 reg_lambda: 1.0 	 Accuracy: 87.8% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 0.01 	 reg_lambda: 5.0 	 Accuracy: 87.7% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 0.01 	 reg_lambda: 10.0 	 Accuracy: 87.8% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 0.1 	 reg_lambda: 0.1 	 Accuracy: 87.44% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 0.1 	 reg_lambda: 1.0 	 Accuracy: 87.43% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 0.1 	 reg_lambda: 5.0 	 Accuracy: 87.57% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 0.1 	 reg_lambda: 10.0 	 Accuracy: 87.79% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 0 	 reg_lambda: 0.1 	 Accuracy: 87.16% 	 F1 Score(Macro): 0.81
+# max_depth: 12 	 reg_alpha: 0 	 reg_lambda: 1.0 	 Accuracy: 87.08% 	 F1 Score(Macro): 0.81
+# max_depth: 12 	 reg_alpha: 0 	 reg_lambda: 5.0 	 Accuracy: 87.41% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 0 	 reg_lambda: 10.0 	 Accuracy: 87.35% 	 F1 Score(Macro): 0.81
+# max_depth: 12 	 reg_alpha: 10 	 reg_lambda: 0.1 	 Accuracy: 87.56% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 10 	 reg_lambda: 1.0 	 Accuracy: 87.22% 	 F1 Score(Macro): 0.81
+# max_depth: 12 	 reg_alpha: 10 	 reg_lambda: 5.0 	 Accuracy: 87.43% 	 F1 Score(Macro): 0.82
+# max_depth: 12 	 reg_alpha: 10 	 reg_lambda: 10.0 	 Accuracy: 87.45% 	 F1 Score(Macro): 0.81
+# max_depth: 12 	 reg_alpha: 100 	 reg_lambda: 0.1 	 Accuracy: 86.15% 	 F1 Score(Macro): 0.79
+# max_depth: 12 	 reg_alpha: 100 	 reg_lambda: 1.0 	 Accuracy: 86.05% 	 F1 Score(Macro): 0.79
+# max_depth: 12 	 reg_alpha: 100 	 reg_lambda: 5.0 	 Accuracy: 86.18% 	 F1 Score(Macro): 0.79
+# max_depth: 12 	 reg_alpha: 100 	 reg_lambda: 10.0 	 Accuracy: 86.07% 	 F1 Score(Macro): 0.79
+# max_depth: 20 	 reg_alpha: 0.01 	 reg_lambda: 0.1 	 Accuracy: 87.92% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 0.01 	 reg_lambda: 1.0 	 Accuracy: 87.82% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 0.01 	 reg_lambda: 5.0 	 Accuracy: 87.77% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 0.01 	 reg_lambda: 10.0 	 Accuracy: 88.03% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 0.1 	 reg_lambda: 0.1 	 Accuracy: 87.26% 	 F1 Score(Macro): 0.81
+# max_depth: 20 	 reg_alpha: 0.1 	 reg_lambda: 1.0 	 Accuracy: 87.56% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 0.1 	 reg_lambda: 5.0 	 Accuracy: 87.89% 	 F1 Score(Macro): 0.82
+# --> max_depth: 20 	 reg_alpha: 0.1 	 reg_lambda: 10.0 	 Accuracy: 88.18% 	 F1 Score(Macro): 0.83 <--
+# max_depth: 20 	 reg_alpha: 0 	 reg_lambda: 0.1 	 Accuracy: 87.7% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 0 	 reg_lambda: 1.0 	 Accuracy: 87.93% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 0 	 reg_lambda: 5.0 	 Accuracy: 87.86% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 0 	 reg_lambda: 10.0 	 Accuracy: 87.69% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 10 	 reg_lambda: 0.1 	 Accuracy: 87.39% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 10 	 reg_lambda: 1.0 	 Accuracy: 87.46% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 10 	 reg_lambda: 5.0 	 Accuracy: 87.44% 	 F1 Score(Macro): 0.82
+# max_depth: 20 	 reg_alpha: 10 	 reg_lambda: 10.0 	 Accuracy: 87.4% 	 F1 Score(Macro): 0.81
+# max_depth: 20 	 reg_alpha: 100 	 reg_lambda: 0.1 	 Accuracy: 86.04% 	 F1 Score(Macro): 0.79
+# max_depth: 20 	 reg_alpha: 100 	 reg_lambda: 1.0 	 Accuracy: 86.32% 	 F1 Score(Macro): 0.79
+# max_depth: 20 	 reg_alpha: 100 	 reg_lambda: 5.0 	 Accuracy: 86.25% 	 F1 Score(Macro): 0.79
+# max_depth: 20 	 reg_alpha: 100 	 reg_lambda: 10.0 	 Accuracy: 86.39% 	 F1 Score(Macro): 0.79
+# max_depth: 16 	 reg_alpha: 0.01 	 reg_lambda: 0.1 	 Accuracy: 87.74% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0.01 	 reg_lambda: 1.0 	 Accuracy: 87.98% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0.01 	 reg_lambda: 5.0 	 Accuracy: 87.71% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0.01 	 reg_lambda: 10.0 	 Accuracy: 87.77% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0.1 	 reg_lambda: 0.1 	 Accuracy: 87.77% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0.1 	 reg_lambda: 1.0 	 Accuracy: 87.83% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0.1 	 reg_lambda: 5.0 	 Accuracy: 87.68% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0.1 	 reg_lambda: 10.0 	 Accuracy: 87.71% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0 	 reg_lambda: 0.1 	 Accuracy: 87.68% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0 	 reg_lambda: 1.0 	 Accuracy: 87.67% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0 	 reg_lambda: 5.0 	 Accuracy: 87.95% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 0 	 reg_lambda: 10.0 	 Accuracy: 87.76% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 10 	 reg_lambda: 0.1 	 Accuracy: 87.39% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 10 	 reg_lambda: 1.0 	 Accuracy: 87.44% 	 F1 Score(Macro): 0.81
+# max_depth: 16 	 reg_alpha: 10 	 reg_lambda: 5.0 	 Accuracy: 87.4% 	 F1 Score(Macro): 0.81
+# max_depth: 16 	 reg_alpha: 10 	 reg_lambda: 10.0 	 Accuracy: 87.67% 	 F1 Score(Macro): 0.82
+# max_depth: 16 	 reg_alpha: 100 	 reg_lambda: 0.1 	 Accuracy: 86.26% 	 F1 Score(Macro): 0.79
+# max_depth: 16 	 reg_alpha: 100 	 reg_lambda: 1.0 	 Accuracy: 86.41% 	 F1 Score(Macro): 0.79
+# max_depth: 16 	 reg_alpha: 100 	 reg_lambda: 5.0 	 Accuracy: 86.18% 	 F1 Score(Macro): 0.79
+# max_depth: 16 	 reg_alpha: 100 	 reg_lambda: 10.0 	 Accuracy: 86.29% 	 F1 Score(Macro): 0.79
+
+# Further tune XGBoost on Regularization and Tree Depth
+def perform_xgboost_tuning_2(X):
+    # Load the dataset
+    X_train, X_val, _, X_train_pca, X_val_pca, \
+                            _, y_train, y_val, _ = X
+
+    parameters = {
+                "max_depth": [12, 20, 16],
+                "reg_alpha":[1e-2, 0.1, 0, 10, 100],
+                "reg_lambda": [0.1, 1.0, 5.0, 10.0],                    
+            }
+
+    print("==========================================================")
+    print(f"\033[1m Tune XGBoost on Regularization Parameters (Full Data)\033[0m")
+    print("==========================================================")
+
+    for d in parameters['max_depth']:
+        for a in parameters['reg_alpha']:
+            for l in parameters['reg_lambda']:
+                clf_xg = xgb.XGBClassifier(use_label_encoder=False, verbosity = 0, \
+                                random_state=42, n_estimator=100, scale_pos_weight=1, \
+                                subsample=0.8, colsample_bytree=0.8, max_depth=d, \
+                                learning_rate=0.3, reg_alpha=a, reg_lambda=l)
+                clf_xg.fit(X_train, y_train)
+                y_pred = clf_xg.predict(X_val)
+                score = accuracy_score(y_val, y_pred)
+                f1_s = f1_score(y_val, y_pred, average='macro')
+                print(f"max_depth: {d} \t reg_alpha: {a} \t reg_lambda: {l} \t Accuracy: {round(100*score, 2)}% \t F1 Score(Macro): {round(f1_s, 2)}") 

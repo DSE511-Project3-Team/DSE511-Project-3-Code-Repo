@@ -1,4 +1,5 @@
 from prettytable import PrettyTable
+from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score, f1_score, classification_report
 
 def classification_report_2(y_true, y_pred):
@@ -10,12 +11,15 @@ def classification_report_2(y_true, y_pred):
 
     class_0_accuracy = 100.0 * sum(y_pred[y_true == 0] == y_true[y_true == 0]) / sum(y_true == 0)
     class_1_accuracy = 100.0 * sum(y_pred[y_true == 1] == y_true[y_true == 1]) / sum(y_true == 1)
+    specificity = tn_00 / (tn_00+fp_01)
 
     # print("Kmeans Classification Report:")
     print(f"Overall Accuracy: {round(100.0 * accuracy_score(y_true, y_pred), 2)} %")
     # print(f"F1-Score: {round(f1_score(y_true, y_pred), 3)}")
     print(f"Class 0 accuracy: {round(class_0_accuracy, 2)} %")
     print(f"Class 1 accuracy: {round(class_1_accuracy, 2)} %")
+    print(f"Class 1 accuracy: {round(class_1_accuracy, 2)} %")
+    print(f"Specificity: {round(specificity, 2)}")
 
     print("Confusion Matrix:")
     confusion_matrix = PrettyTable(['', 'Predicted 0', 'Predicted 1', 'Total'])
