@@ -4,10 +4,24 @@ import sys
 from src.data.download_data import generate_base_data
 from src.preprocessing.process_imputed_data import generate_imputed_data
 from src.preprocessing.process_modelling_data import get_modelling_data
+<<<<<<< HEAD
 from src.models.tune_xgboost import perform_xgboost_tuning, perform_xgboost_tuning_2
+=======
+
+from src.models.tune_xgboost import perform_xgboost_tuning
+>>>>>>> main
 from src.models.tune_adaboost import perform_adaboost_tuning 
+from src.models.tune_logistic_regression import perform_Logistic_Regression_tuning 
+from src.models.tune_random_forest import perform_random_forest_tuning 
+from src.models.tune_multinomial_bayes import perform_multinomial_naive_bayes_tuning 
+from src.models.tune_gradient_boosting_classifier import perform_gradient_boosting_tuning 
+
 from src.results.xgboost_results import get_xgboost_results
 from src.results.adaboost_results import get_adaboost_results
+from src.results.logistic_regression_results import perform_Logistic_Regression_testing
+from src.results.random_forest_results import perform_random_forest_testing
+from src.results.multinomial_bayes_results import perform_multinomial_naive_bayes_testing
+from src.results.gradient_boosting_results import perform_gradient_boosting_testing
 
 def generate_data():
     # Download, filter and impute data for six cities
@@ -29,7 +43,23 @@ def perform_tuning():
     # 2. Tune AdaBoost
     perform_adaboost_tuning(X, 'full')
     perform_adaboost_tuning(X, 'pca')
+    
+    # 3. Tune Logistic Regression
+    perform_Logistic_Regression_tuning(X, 'full')
+    perform_Logistic_Regression_tuning(X, 'pca')
 
+    # 4. Tune Random Forest
+    perform_random_forest_tuning(X, 'full')
+    perform_random_forest_tuning(X, 'pca')
+    
+    # 5. Tune Naive Bayes
+    perform_multinomial_naive_bayes_tuning(X, 'full')
+    perform_multinomial_naive_bayes_tuning(X, 'pca')
+
+    # 6. Tune Gradient Boosting Classifier
+    perform_gradient_boosting_tuning(X, 'full')
+    perform_gradient_boosting_tuning(X, 'pca')
+    
 def generate_results():
     # Perform feature encoding, extraction, standardization, and train/val/test split
     X = get_modelling_data()
@@ -40,7 +70,23 @@ def generate_results():
 
     # 2. AdaBoost Results
     get_adaboost_results(X)
+    
+    # 3. Logistic Regression Results
+    perform_Logistic_Regression_testing(X=X, param='full')
+    perform_Logistic_Regression_testing(X=X, param='pca')
 
+    # 4. Random Forest Results
+    perform_random_forest_testing(X=X, param='full')
+    perform_random_forest_testing(X=X, param='pca')
+    
+    # 5. Naive Bayes Results
+    perform_multinomial_naive_bayes_testing(X=X, param='full')
+    perform_multinomial_naive_bayes_testing(X=X, param='pca')
+
+    # 6. Gradient Boosting Classifier Results
+    perform_gradient_boosting_testing(X=X, param='full')
+    perform_gradient_boosting_testing(X=X, param='pca')
+    
 if __name__ == "__main__":
 
     ## 1. GENERATE DATA 
