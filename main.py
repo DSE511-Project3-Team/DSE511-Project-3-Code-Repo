@@ -4,12 +4,7 @@ import sys
 from src.data.download_data import generate_base_data
 from src.preprocessing.process_imputed_data import generate_imputed_data
 from src.preprocessing.process_modelling_data import get_modelling_data
-<<<<<<< HEAD
 from src.models.tune_xgboost import perform_xgboost_tuning, perform_xgboost_tuning_2
-=======
-
-from src.models.tune_xgboost import perform_xgboost_tuning
->>>>>>> main
 from src.models.tune_adaboost import perform_adaboost_tuning 
 from src.models.tune_logistic_regression import perform_Logistic_Regression_tuning 
 from src.models.tune_random_forest import perform_random_forest_tuning 
