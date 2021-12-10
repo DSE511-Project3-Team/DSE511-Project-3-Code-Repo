@@ -45,13 +45,13 @@ We employ ANOVA to find if there is a statistically significant difference betwe
 
 1. Logistic Regression (Baseline)
 2. Multinomial Naive Bayes
-3. Support Vector Machine
 
 Ensemble methods that we use are:
 
 1. Random Forest
 2. XGBoost
 3. Adaboost
+4. Gradient Boosting
 
 ## Github Workflow
 
