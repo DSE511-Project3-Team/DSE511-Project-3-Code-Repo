@@ -12,12 +12,13 @@ def get_xgboost_results(X):
                     learning_rate=0.3, reg_alpha=0.1, reg_lambda=10)
     clf_xg.fit(X_train, y_train)
     train_time = time.time() - start_time
-    print("======================================")
-    print(f"\033[1m XGBoost Train Results Full Data\033[0m")
-    print("======================================")
-    print(f"XGBoost training time {round(train_time, 2)} secs")
-    y_pred = clf_xg.predict(X_train)
-    classification_report_2(y_train, y_pred)
+
+    # print("======================================")
+    # print(f"\033[1m XGBoost Train Results Full Data\033[0m")
+    # print("======================================")
+    # print(f"XGBoost training time {round(train_time, 2)} secs")
+    # y_pred = clf_xg.predict(X_train)
+    # classification_report_2(y_train, y_pred)
 
     start_time = time.time()
     y_pred = clf_xg.predict(X_test)
@@ -35,12 +36,13 @@ def get_xgboost_results(X):
                     learning_rate=0.3)
     clf_xg.fit(X_train_pca, y_train)
     train_time = time.time() - start_time
-    print("======================================")
-    print(f"\033[1m XGBoost Train Results PCA Data\033[0m")
-    print("======================================")
-    print(f"XGBoost training time {round(train_time, 2)} secs")
-    y_pred = clf_xg.predict(X_train_pca)
-    classification_report_2(y_train, y_pred)
+
+    # print("======================================")
+    # print(f"\033[1m XGBoost Train Results PCA Data\033[0m")
+    # print("======================================")
+    # print(f"XGBoost training time {round(train_time, 2)} secs")
+    # y_pred = clf_xg.predict(X_train_pca)
+    # classification_report_2(y_train, y_pred)
 
     start_time = time.time()
     y_pred = clf_xg.predict(X_test_pca)

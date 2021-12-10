@@ -96,5 +96,5 @@ if __name__ == "__main__":
 
     ## 3. RESULTS
     if sys.argv[1] == 'results':
-        print("Generating Results ... ")
+        print("Generating Results, wait time (11 Mins) ... ")
         generate_results()

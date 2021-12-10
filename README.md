@@ -64,12 +64,12 @@ We plan to manage the development of code by having one main branch and three de
 
     ├── README.md          <- The top-level README carrying the project description and organization.
     ├── data
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original data that we use for further processing.
+    │   ├── processed      <- The final, canonical data sets for modeling.
+    │   └── raw            <- The original data that we use for further processing.
     │
     ├── docs
-    │   ├── EDA            <- Folder saving generated images from EDA process.
-    │   └── reports        <- Folder carrying reports and presentations submitted during the project.
+    │   ├── images         <- Folder saving generated images for report and presentation.
+    │   └── reports        <- Folder carrying reports and presentations submitted during the project.
     │
     ├── notebooks          <- Folder carrying Jupyter notebooks.
     │
@@ -78,13 +78,13 @@ We plan to manage the development of code by having one main branch and three de
     │
     ├── src                <- Source code used in this project.
     │   │
-    │   ├── data           <- Scripts to download or generate data.
-    │   ├── models         <- Scripts to train models and then use trained models to make
+    │   ├── data           <- Scripts to download or generate data.
+    │   ├── models         <- Scripts to train models and then use trained models to make
     │   │                     predictions.
-    │   ├── preprocessing  <- Scripts to perform train/test split, feature selection, feature 
+    │   ├── preprocessing  <- Scripts to perform train/test split, feature selection, feature 
     |   |                     extraction etcetra.
     |   |── results        <- Folder carrying script to generate results from our tuned models.    
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations.
+    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations.
     │
     └── main.py            <- Script that will run all the necessary code to generate the results.
     
